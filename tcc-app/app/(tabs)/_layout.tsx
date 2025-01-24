@@ -10,16 +10,21 @@ export default function TabLayout() {
             options={{
               headerShown:false,
               tabBarStyle: {display:'none'}
-            }}
-        />
+        }}/>
 
         <Tabs.Screen
             name='redefinirSenha'
             options={{
               headerShown:false,
               tabBarStyle: {display:'none'}
-            }}
-        />
+        }}/>
+
+        <Tabs.Screen
+            name='redefinirSenhaConfirmacao'
+            options={{
+              headerShown:false,
+              tabBarStyle: {display:'none'}
+        }}/>
             
     </Tabs>
   )

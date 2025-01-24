@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity, Button } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import Colors from "@/constants/Colors";
+import Constants from "@/constants/Constants";
 import { useState } from "react";
 import { Link } from "expo-router";
 
@@ -18,8 +18,7 @@ export default function Index() {
         <View style={styles.main}>
           
           <Image 
-            source={require('../../assets/images/MetreLogo1.png')}
-          />
+            source={require('../../assets/images/MetreLogo1.png')}/>
 
           <Text style={styles.titulo}>Seja Bem-Vindo(a)</Text>
 
@@ -31,30 +30,27 @@ export default function Index() {
               value={cpf}
               keyboardType="numeric"
               placeholder="CPF"
-              placeholderTextColor={Colors.MARROM}
-            />
+              placeholderTextColor={Constants.MARROM}/>
 
             <TextInput
               style={styles.senhaInput}
               onChangeText={setSenha}
               value={senha}
               placeholder="Senha"
-              placeholderTextColor={Colors.MARROM}
-            />
+              placeholderTextColor={Constants.MARROM}/>
 
             <TouchableOpacity
               style={styles.botaoEntrar}
-              onPress={apertarBotaoEntrar}
-            >
+              onPress={apertarBotaoEntrar}>
               <Text style={styles.botaoEntrarTexto}>Entrar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
-              style={styles.botaoEsqueciSenha}
-              onPress={apertarBotaoEntrar}
-            >
-              <Text style={styles.botaoEsqueciSenhaTexto}>Esqueci minha senha</Text>
-              <Link href={"/redefinirSenha"}>ir para a prox tela</Link>
+              style={styles.botaoEsqueciSenha}>
+              <Link
+                style={styles.botaoEsqueciSenhaTexto}
+                href={"/redefinirSenha"}>
+                Esqueci minha senha</Link>
             </TouchableOpacity>
 
           </View>
@@ -69,10 +65,12 @@ const styles = StyleSheet.create({
 
   safeArea:{
     flex:1,
-    backgroundColor:Colors.BRANCO
+    backgroundColor:Constants.BRANCO
   },
 
   main:{
+    width:'100%',
+    height:'100%',
     display:'flex',
     flexDirection:'column',
     alignItems:'center',
@@ -81,7 +79,7 @@ const styles = StyleSheet.create({
 
   titulo:{
     fontSize:32,
-    color:Colors.MARROM,
+    color:Constants.MARROM,
     marginTop:'20%',
   },
 
@@ -98,8 +96,8 @@ const styles = StyleSheet.create({
     width:'100%',
     paddingHorizontal:12,
     borderWidth:1,
-    borderRadius:8,
-    borderColor:Colors.LARANJA,
+    borderRadius:Constants.ARREDONDAMENTO_BOTAO,
+    borderColor:Constants.LARANJA,
     marginTop:'8%',
     boxSizing: 'border-box',
   },
@@ -109,17 +107,17 @@ const styles = StyleSheet.create({
     width:'100%',
     paddingHorizontal:12,
     borderWidth:1,
-    borderRadius:8,
-    borderColor:Colors.LARANJA,
+    borderRadius:Constants.ARREDONDAMENTO_BOTAO,
+    borderColor:Constants.LARANJA,
     marginTop:'8%',
     boxSizing: 'border-box',
   },
 
   botaoEntrar:{
-    backgroundColor:Colors.LARANJA,
+    backgroundColor:Constants.LARANJA,
     height:48,
     width:'100%',
-    borderRadius:8,
+    borderRadius:Constants.ARREDONDAMENTO_BOTAO,
     boxSizing: 'border-box',
     marginTop:'12%',
     display:'flex',
@@ -128,7 +126,7 @@ const styles = StyleSheet.create({
   },
 
   botaoEntrarTexto:{
-    color:Colors.BRANCO,
+    color:Constants.BRANCO,
     fontSize:20
   },
 
@@ -139,7 +137,7 @@ const styles = StyleSheet.create({
   },
 
   botaoEsqueciSenhaTexto:{
-    color:Colors.LARANJA,
+    color:Constants.LARANJA,
     fontSize:12,
     marginTop:'4%'
   }

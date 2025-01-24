@@ -1,7 +1,8 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
-import Colors from '@/constants/Colors'
+import { Link } from 'expo-router';
+import Constants from '@/constants/Constants';
 
 export default function redefinirSenha() {
 
@@ -23,15 +24,14 @@ export default function redefinirSenha() {
                         value={email}
                         keyboardType="email-address"
                         placeholder="endereço de email"
-                        placeholderTextColor={Colors.MARROM}
-                    />
+                        placeholderTextColor={Constants.MARROM}/>
 
                     <TouchableOpacity
-                        style={styles.botaoRedefinir}
-                    >
+                        style={styles.botaoRedefinir}>
                         <Text style={styles.botaoRedefinirTexto}>Redefinir</Text>
                     </TouchableOpacity>
 
+                    <Link href={'/(tabs)/redefinirSenhaConfirmacao'}>Ir para a próxima tela</Link>
                 </View>
             </SafeAreaView>
         </SafeAreaProvider>
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 
     safeArea:{
         flex:1,
-        backgroundColor:Colors.BRANCO,
+        backgroundColor:Constants.BRANCO,
         display:'flex',
         flexDirection:'column',
         alignItems:'center'
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
 
     main:{
         width:'80%',
+        height:'100%',
         display:'flex',
         flexDirection:'column',
         marginTop:'12%'
@@ -58,21 +59,21 @@ const styles = StyleSheet.create({
     titulo:{
         fontSize:28,
         fontWeight:'300',
-        color:Colors.MARROM,
+        color:Constants.MARROM,
     },
 
     texto:{
         fontSize:14,
         fontWeight:'300',
         textAlign:'justify',
-        color:Colors.LARANJA,
+        color:Constants.LARANJA,
         marginTop:'12%'
     },
 
     labelEmail:{
         fontSize:14,
         fontWeight:'300',
-        color:Colors.MARROM,
+        color:Constants.MARROM,
         marginTop:'52%'
     },
 
@@ -81,17 +82,17 @@ const styles = StyleSheet.create({
         width:'100%',
         paddingHorizontal:12,
         borderWidth:1,
-        borderRadius:8,
-        borderColor:Colors.LARANJA,
+        borderRadius:Constants.ARREDONDAMENTO_BOTAO,
+        borderColor:Constants.LARANJA,
         marginTop:'2%',
         boxSizing: 'border-box',  
     },
 
     botaoRedefinir:{
-        backgroundColor:Colors.LARANJA,
+        backgroundColor:Constants.LARANJA,
         height:48,
         width:'100%',
-        borderRadius:8,
+        borderRadius:Constants.ARREDONDAMENTO_BOTAO,
         boxSizing: 'border-box',
         marginTop:'4%',
         display:'flex',
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
     },
 
     botaoRedefinirTexto:{
-        color:Colors.BRANCO,
+        color:Constants.BRANCO,
         fontSize:20
     }
 
