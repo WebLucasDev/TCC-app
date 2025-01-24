@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity, Button } fr
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import Colors from "@/constants/Colors";
 import { useState } from "react";
+import { Link } from "expo-router";
 
 
 export default function Index() {
@@ -53,6 +54,7 @@ export default function Index() {
               onPress={apertarBotaoEntrar}
             >
               <Text style={styles.botaoEsqueciSenhaTexto}>Esqueci minha senha</Text>
+              <Link href={"/redefinirSenha"}>ir para a prox tela</Link>
             </TouchableOpacity>
 
           </View>
