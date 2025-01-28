@@ -2,12 +2,15 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import Constants from '@/constants/Constants'
+import ContainerSuperior from '@/components/ContainerSuperior'
 
 export default function ponto() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.main}>
+
+        <ContainerSuperior/>
 
         </View>
       </SafeAreaView>
@@ -28,6 +31,7 @@ const styles = StyleSheet.create({
     display:'flex',
     flexDirection:'column',
     flexWrap:'nowrap'
-  }
+  },
+
 
 })
