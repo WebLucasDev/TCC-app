@@ -31,7 +31,11 @@ export default function redefinirSenha() {
                         <Text style={styles.botaoRedefinirTexto}>Redefinir</Text>
                     </TouchableOpacity>
 
-                    <Link href={'/(tabs)/redefinirSenhaConfirmacao'}>Ir para a próxima tela</Link>
+                    {/* Remover depois */}
+                    <Link
+                    href={"/_sitemap"}>
+                    sitemap</Link>
+                    
                 </View>
             </SafeAreaView>
         </SafeAreaProvider>

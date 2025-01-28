@@ -45,14 +45,17 @@ export default function Index() {
               <Text style={styles.botaoEntrarTexto}>Entrar</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity 
-              style={styles.botaoEsqueciSenha}>
+            <TouchableOpacity style={styles.botaoEsqueciSenha}>
               <Link
                 style={styles.botaoEsqueciSenhaTexto}
-                href={"/redefinirSenha"}>
+                href={"/_sitemap"}>
                 Esqueci minha senha</Link>
             </TouchableOpacity>
 
+            {/* Remover depois */}
+            <Link
+              href={"/_sitemap"}>
+              sitemap</Link>
           </View>
 
         </View>
