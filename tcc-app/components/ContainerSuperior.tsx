@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import Constants from '@/constants/Constants'
+import UsuarioOpecoes from '@/components/UsuarioOpecoes'
 
 const containerSuperior = () => {
   return (
@@ -11,8 +12,7 @@ const containerSuperior = () => {
         
         <Text style={styles.usuarioNome}>Olá, Lucas</Text>
         
-        <Image
-            source={require('../assets/images/User.png')}/>
+        <UsuarioOpecoes/>
         
     </View>
   )
