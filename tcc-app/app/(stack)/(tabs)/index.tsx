@@ -142,6 +142,6 @@ const styles = StyleSheet.create({
   botaoAjustePontoTexto:{
     textAlign:'center',
     fontSize:12
-  }
+  },
 
 })
