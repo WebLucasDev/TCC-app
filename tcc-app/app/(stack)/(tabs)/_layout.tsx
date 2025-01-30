@@ -10,7 +10,8 @@ export default function TabsLayout() {
     <Tabs
         screenOptions={{
             tabBarIconStyle:{marginBottom:'2%'},
-            
+            tabBarActiveTintColor:Constants.LARANJA,
+            tabBarInactiveTintColor:Constants.MARROM
         }}>
 
         <Tabs.Screen
@@ -24,7 +25,7 @@ export default function TabsLayout() {
                         size={size}
                         color={focused ? Constants.LARANJA : Constants.MARROM}/>
                 )
-            }}
+            }}            
         />
         
         <Tabs.Screen

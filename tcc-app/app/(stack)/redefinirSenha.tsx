@@ -26,8 +26,7 @@ export default function redefinirSenha() {
                         placeholder="endereço de email"
                         placeholderTextColor={Constants.MARROM}/>
 
-                    <TouchableOpacity
-                        style={styles.botaoRedefinir}>
+                    <TouchableOpacity style={styles.botaoRedefinir}>
                         <Text style={styles.botaoRedefinirTexto}>Redefinir</Text>
                     </TouchableOpacity>
 
@@ -88,8 +87,7 @@ const styles = StyleSheet.create({
         borderWidth:1,
         borderRadius:Constants.ARREDONDAMENTO_BOTAO,
         borderColor:Constants.LARANJA,
-        marginTop:'2%',
-        boxSizing: 'border-box',  
+        marginTop:'2%', 
     },
 
     botaoRedefinir:{
@@ -97,7 +95,6 @@ const styles = StyleSheet.create({
         height:48,
         width:'100%',
         borderRadius:Constants.ARREDONDAMENTO_BOTAO,
-        boxSizing: 'border-box',
         marginTop:'4%',
         display:'flex',
         alignItems:'center',
