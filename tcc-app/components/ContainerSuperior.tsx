@@ -3,7 +3,7 @@ import React from 'react'
 import Constants from '@/constants/Constants'
 import UsuarioOpecoes from '@/components/UsuarioOpecoes'
 
-const containerSuperior = () => {
+const ContainerSuperior = () => {
   return (
     <View style={styles.container}>
         
@@ -18,7 +18,7 @@ const containerSuperior = () => {
   )
 }
 
-export default containerSuperior
+export default ContainerSuperior
 
 const styles = StyleSheet.create({
 
