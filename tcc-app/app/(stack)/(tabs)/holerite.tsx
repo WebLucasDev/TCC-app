@@ -13,6 +13,10 @@ export default function holerite() {
 
         <ContainerSuperior/>
 
+        <View style={styles.containerInputs}>
+
+        </View>
+
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
@@ -34,5 +38,20 @@ const styles = StyleSheet.create({
     flexWrap:'nowrap',
     alignItems:'center'
   },
+
+  containerInputs:{
+    width:'80%',
+    height:70,
+    marginTop:'12%',
+    backgroundColor:Constants.MARROM,
+    opacity:0.7,
+    borderWidth:1,
+    borderColor:Constants.CINZA,
+    borderRadius:Constants.ARREDONDAMENTO_BOTAO,
+    display:'flex',
+    justifyContent:'center',
+  },
+
+  
 
 })
