@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 import Constants from '@/constants/Constants'
 import ContainerSuperior from '@/components/ContainerSuperior'
 import DropDownPicker from 'react-native-dropdown-picker';
+import Feather from '@expo/vector-icons/Feather';
 
 export default function holerite() {
   
@@ -40,33 +41,38 @@ export default function holerite() {
       <SafeAreaView style={styles.safeArea}>
         <View style={styles.main}>
 
-        <ContainerSuperior/>
+          <ContainerSuperior/>
 
-        <View style={styles.containerInputs}>
-          <DropDownPicker
-            open={abertoMes}
-            value={valorSelecionadoMes}
-            items={meses}
-            setOpen={setAbertoMes}
-            setValue={setValorSelecionadoMes}
-            setItems={setMeses}
-            placeholder='Mês'
-            style={styles.inputsAno}
-          />
+            <View style={styles.containerInputs}>
+              <DropDownPicker
+                open={abertoMes}
+                value={valorSelecionadoMes}
+                items={meses}
+                setOpen={setAbertoMes}
+                setValue={setValorSelecionadoMes}
+                setItems={setMeses}
+                placeholder='Mês'
+                style={styles.inputsAno}
+              />
 
-          <DropDownPicker
-            open={abertoAno}
-            value={valorSelecionadoAno}
-            items={anos}
-            setOpen={setAbertoAno}
-            setValue={setValorSelecionadoAno}
-            setItems={setAnos}
-            placeholder='Ano'
-            style={styles.inputs}
-            zIndex={1000}
-            />
-        </View>
+              <DropDownPicker
+                open={abertoAno}
+                value={valorSelecionadoAno}
+                items={anos}
+                setOpen={setAbertoAno}
+                setValue={setValorSelecionadoAno}
+                setItems={setAnos}
+                placeholder='Ano'
+                style={styles.inputs}
+                zIndex={1000}
+                />
 
+              <TouchableOpacity style={styles.botaoPesquisar}>
+                <Feather name="search" size={20} color={Constants.BRANCO} />
+                <Text style={styles.botaoPesquisarTexto}>Pesquisar</Text>
+              </TouchableOpacity>
+
+            </View>
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
@@ -98,16 +104,38 @@ const styles = StyleSheet.create({
     borderWidth:1,
     borderColor:Constants.CINZA,
     borderRadius:Constants.ARREDONDAMENTO_BOTAO,
-    display:'flex',
     justifyContent:'center',
+    alignItems:'center'
   },
 
   inputsAno:{
     marginBottom:'4%',
+    borderColor:Constants.LARANJA,
+    backgroundColor:Constants.BRANCO,
+    opacity:0.8,
   },
 
   inputs:{
+    borderColor:Constants.LARANJA,
+    backgroundColor:Constants.BRANCO,
+    opacity:0.8,
+  },
 
-  } 
+  botaoPesquisar:{
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+    gap:'4%',
+    marginTop:'8%',
+    borderRadius:Constants.ARREDONDAMENTO_BOTAO,
+    backgroundColor:Constants.LARANJA,
+    width:'50%',
+    paddingVertical:'1%'
+  },
+
+  botaoPesquisarTexto:{
+    color:Constants.BRANCO,
+    fontWeight:'500',
+  }
 
 })

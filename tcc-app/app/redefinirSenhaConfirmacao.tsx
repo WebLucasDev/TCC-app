@@ -14,7 +14,7 @@ export default function redefinirSenhaConfirmacao() {
                     
                     <Image
                         style={styles.confirmacaoIcone}
-                        source={require('../../assets/images/Check-Mark.png')}/>
+                        source={require('../assets/images/Check-Mark.png')}/>
                     
                     <View style={styles.containerTextoConfirmacao}>
                         
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 
     containerConfirmacao:{
         width:'76%',
-        height:'44%',
+        height:'auto',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',

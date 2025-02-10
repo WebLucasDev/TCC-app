@@ -18,7 +18,7 @@ export default function Index() {
         <View style={styles.main}>
           
           <Image 
-            source={require('../../assets/images/MetreLogo1.png')}/>
+            source={require('../assets/images/MetreLogo1.png')}/>
 
           <Text style={styles.titulo}>Seja Bem-Vindo(a)</Text>
 
