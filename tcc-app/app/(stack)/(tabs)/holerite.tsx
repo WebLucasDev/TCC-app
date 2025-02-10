@@ -52,7 +52,7 @@ export default function holerite() {
             setItems={setMeses}
             placeholder='Mês'
             style={styles.inputsAno}
-            />
+          />
 
           <DropDownPicker
             open={abertoAno}
@@ -63,6 +63,7 @@ export default function holerite() {
             setItems={setAnos}
             placeholder='Ano'
             style={styles.inputs}
+            zIndex={1000}
             />
         </View>
 
